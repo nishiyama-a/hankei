@@ -1,0 +1,13 @@
+.default-img{
+  margin-bottom: 0;
+  line-height: 0;
+}
+
+@include breakpoint(small){
+  .sp-wfull{
+    width: calc(100% + (#{$win-pd} * 2));
+    max-width: inherit;
+    margin: 0 -#{$win-pd};
+    display: block;
+  }
+}

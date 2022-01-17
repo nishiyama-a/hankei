@@ -1,0 +1,103 @@
+#modal-overlay{
+  width: 100%;
+  height: 130%;
+  background: rgba(0, 0, 0, .75);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 400;
+  opacity: 0;
+}
+
+
+.modal-open{
+  cursor: pointer;
+}
+.modal-close{
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  top: -40px;
+  z-index: 0;
+  // 右上のとき
+  // position: fixed;
+  // top: 20px;
+  // right: 20px;
+  &:before,
+  &:after{
+    width: 100%;
+    height: 1px;
+    content: '';
+    display: block;
+    background: #FFF;
+    position: absolute;
+    top: 14px;
+    left: 0;
+  }
+  &:before{
+    transform: rotate(45deg);
+  }
+  &:after{
+    transform: rotate(-45deg);
+  }
+}
+
+.modal-area{
+  width: 100%;
+  max-width: $sc-inr;
+  padding: 0 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 401;
+  display: none;
+}
+.modal-contents{
+  padding: 50px;
+  max-height: 80vh;
+  overflow-y: scroll;
+  background: #FFF;
+  opacity: 0;
+  @include main-transition(1s);
+}
+
+.modal{
+  &-privacy{
+    dl{
+      dt{
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: rem(16);
+      }
+      dd{
+        margin-bottom: 40px;
+        &:last-child{
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+
+// SP
+@include breakpoint(small){
+  .modal{
+    &-area{
+      padding: 0 20px;
+    }
+    &-contents{
+      padding: 20px;
+      max-height: 70vh;
+      -webkit-overflow-scrolling: touch;
+    }
+    &-close{
+      width: 30px;
+      height: 30px;
+      right: 20px;
+      // top: 7px;
+    }
+  }
+}

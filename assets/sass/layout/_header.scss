@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  height: $header-h;
+  padding: 0 $win-pd;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  .header-logo {
+    width: 130px;
+    line-height: 0;
+    a {
+      display: block;
+    }
+  }
+  .header-main {
+    width: calc(100% - 130px);
+  }
+}
+
+
+
+// SP
+@include breakpoint(small){
+  .header {
+    height: $hambmenu-h;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 301;
+    .header-logo {
+      width: 120px;
+      position: relative;
+      z-index: 303;
+      a {
+        img {
+          height: 100%;
+        }
+      }
+    }
+    .header-main {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// @include obj-default;
+// @include obj-right(10);
+@mixin obj-center{
+	width: 100%;
+	margin: 0 auto;
+  text-align: center;
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  @content;
+}
+@mixin obj-right($right){
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	right: $right + px;
+  transform: translate(0,-50%);
+  @content;
+}
+@mixin obj-left($left){
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+  left: $left + px;
+  transform: translate(0,-50%);
+  @content;
+}

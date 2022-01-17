@@ -1,0 +1,8 @@
+// 画像hover
+.img-h{
+  @include transition;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+

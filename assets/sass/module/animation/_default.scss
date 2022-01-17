@@ -1,0 +1,17 @@
+// アニメーションmixinデフォルト
+// @include keyframes(●キーフレー名●)
+// @include animation(menu-bar-1 .75s forwards);
+@mixin keyframes($animation-name: animaton) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+  animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

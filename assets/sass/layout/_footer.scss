@@ -1,0 +1,17 @@
+.footer{
+  padding: 40px 0;
+  background: $clr-text;
+  color: #FFF;
+  .footer-logo{
+    width: 100px;
+    margin: auto;
+  }
+  .copy{
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    font-size: rem(11);
+    font-family: $font-eng;
+    text-align: center;
+  }
+}

@@ -1,0 +1,75 @@
+%tbl-cmn {
+  width: 100%;
+  border-collapse: collapse;
+  border-left:1px solid $clr-gray;;
+  border-top:1px solid $clr-gray;;
+  th,
+  td{
+    padding: 15px 20px;
+    background: #FFF;
+    border-right:1px solid $clr-gray;;
+    border-bottom:1px solid $clr-gray;;
+    line-height: 1.4;
+    text-align: left;
+  }
+  th{
+    background: #EEE;
+  }
+  thead{
+    th{
+      text-align: center;
+    }
+  }
+}
+
+.tbl{
+  &-1{
+    @extend %tbl-cmn;
+    thead{
+      th{
+        background: $clr-main;
+      }
+    }
+  }
+  &-2{
+    @extend %tbl-cmn;
+    th{
+      background: $clr-sub;
+      color: #FFF;
+    }
+  }
+}
+
+
+
+@include breakpoint(small){
+
+  .sp-scroll{
+    width: calc(100% + #{$win-pd});
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    &:before{
+      margin-bottom: 5px;
+      content: '→横スクロールできます';
+      position: sticky;
+      left: 0;
+      top: 0;
+    }
+    >table{
+      width: 200vw !important;
+      margin-top: 10px;
+    }
+  }
+
+  .tbl-sp{
+    th,
+    td{
+      width: 100%!important;
+      display: block;
+    }
+  }
+
+
+
+}

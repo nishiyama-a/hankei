@@ -1,0 +1,81 @@
+.gnav-main{
+	display: flex;
+	justify-content: flex-end;
+	>li{
+		margin-right: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:last-of-type{
+			margin-right: 0;
+		}
+		a{
+			padding: 0 0 10px;
+			color: $clr-text;
+			font-size: rem(16);
+			font-weight: bold;
+			position: relative;
+			&:after {
+				height: 2px;
+				content: '';
+				background: $clr-main;
+				@include transition;
+				transition-property: right;
+				position: absolute;
+				left: 0;
+				right: 100%;
+				bottom: 0;
+				z-index: 0;
+			}
+			&:hover{
+				color: $clr-main;
+				text-decoration: none;
+				&:after{
+					right: 0;
+				}
+			}
+		}
+		&.nav-active{
+			a{
+				color: $clr-main;
+				&:after{
+					right: 0;
+				}
+			}
+		}
+	}
+}
+
+// SP
+@include breakpoint(small){
+
+	.gnav{
+		width: 100%;
+	}
+	.gnav-main{
+		display: block;
+		>li{
+			width: 100%;
+			height: auto;
+			border-bottom: 1px solid $clr-gray;
+			margin-right: 0;
+			text-align: center;
+			a{
+				width: 100%;
+				padding: 20px 0;
+				display: block;
+			}
+			&.nav-active{
+				border-bottom-color: $clr-main;
+				a{
+					&:after{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+
+}
+

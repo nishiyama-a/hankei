@@ -1,0 +1,128 @@
+%clm-cmn {
+  width: 100%;
+  width: calc(100% + (#{$clm-pd} * 2));
+  margin: 0 -#{$clm-pd};
+  display: flex;
+  flex-wrap: wrap;
+  >li,
+  .clm-li{
+    margin-bottom: 40px;
+    padding: 0 $clm-pd;
+    position: relative;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+}
+
+.clm-box{
+  position: relative;
+  .clm-img{
+    overflow: hidden;
+    img{
+      @include transition;
+    }
+    &:hover{
+      img{
+        transform: scale($img-scale);
+      }
+    }
+  }
+  .clm-btn{
+    width: 100%;
+    max-width: 100%;
+    margin: 30px 0 0;
+  }
+  .clm-copy{
+    margin-top: 30px;
+  }
+  .clm-alink{
+    @extend %alink;
+  }
+}
+
+.clm-1{
+  @extend %clm-cmn;
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+}
+.clm-2{
+  @extend %clm-cmn;
+  >li,
+  .clm-li{
+    width: 50%;
+  }
+}
+.clm-3{
+  @extend %clm-cmn;
+  width: 99.999%;
+  width: calc(99.999% + (#{$clm-pd} * 2));
+  >li,
+  .clm-li{
+    width: 33.333%;
+  }
+}
+.clm-4{
+  @extend %clm-cmn;
+  >li,
+  .clm-li{
+    width: 25%;
+  }
+}
+
+
+
+
+
+// sp 767px
+@include breakpoint(small){
+
+  %clm-cmn {
+    >li,
+    .clm-li{
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .sp-clm-2{
+    >li,
+    .clm-li{
+      width: 50%;
+    }
+  }
+
+  .sp-clm-v{
+    >li{
+      width: 100%;
+      .clm-box{
+        padding-bottom: $btnsp-h + 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        &.h-link{
+          padding-bottom: 0;
+        }
+      }
+      .default-img{
+        width: 35%;
+      }
+      .clm-copy{
+        width: 62.3871%;
+        margin: 0;
+        font-size: rem(14);
+        line-height: lh(14);
+      }
+      .clm-btn{
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+}

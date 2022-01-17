@@ -1,0 +1,151 @@
+// ボタン高道祖
+$btn-h: 70px;
+$btnsp-h: 55px;
+
+%btn-arr{
+  &:before{
+    border-color: #FFF;
+    @include transition;
+  }
+}
+%btn {
+  width: 100%;
+  height: $btn-h;
+  cursor: pointer;
+  display: flex;
+  border: 1px solid #000;
+  color: #FFF;
+  position: relative;
+  span{
+    width: 100%;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:hover{
+    background: #FFF;
+    text-decoration: none;
+  }
+}
+
+
+.btn-wrap{
+  width: calc(100% + (#{$clm-pd} * 2));
+  margin: 30px -#{$clm-pd};
+  margin-bottom: $line-pd;
+  margin-top: $line-pd;
+  display: flex;
+  align-items: stretch;
+  text-align: center;
+  &.clm-1{
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    &.btn-left{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  >.clm-li{
+    margin-bottom: 0!important;
+  }
+}
+
+.btn{
+  &-1{
+    @extend %btn;
+    background: $clr-main;
+    border-color: $clr-main;
+    &:hover{
+      color: $clr-main;
+      span{
+        &:before{
+          border-color: $clr-main;
+        }
+      }
+    }
+  }
+  &-2{
+    @extend %btn;
+    background: $clr-sub;
+    border-color: $clr-sub;
+    &:hover{
+      color: $clr-sub;
+      span{
+        &:before{
+          border-color: $clr-sub;
+        }
+      }
+    }
+  }
+}
+.btn-style{
+  &.is-disable{
+    @extend %btn;
+    background: $clr-gray;
+    border-color: $clr-gray;
+    pointer-events: none;
+    &:hover{
+      color: $clr-gray;
+      span{
+        &:before{
+          border-color: $clr-gray;
+        }
+      }
+    }
+  }
+
+  .arr{
+    &-prev{
+      @extend %btn-arr;
+      &:hover{
+        &:before{
+          left: 5px;
+        }
+      }
+    }
+    &-next{
+      @extend %btn-arr;
+      &:before{
+        left: auto;
+      }
+      &:hover{
+        &:before{
+          right: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// SP
+@include breakpoint(small){
+
+  %btn {
+    height: $btnsp-h;
+    span{
+      padding: 0 15px;
+      line-height: 1.2;
+    }
+  }
+
+  .btn-style{
+    .arr{
+      &-prev{
+        &:before{
+          left: 5px;
+        }
+      }
+      &-next{
+        &:before{
+          right: 5px;
+        }
+      }
+    }
+  }
+
+}

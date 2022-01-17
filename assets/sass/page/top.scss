@@ -1,0 +1,37 @@
+.copy-box{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:first-child{
+        background-image: url(../img/top/copy01.svg);
+    }
+    &:nth-child(2){
+        background-image: url(../img/top/copy02.svg);
+    }
+    &:nth-child(3){
+        background-image: url(../img/top/copy03.svg);
+    }
+    &:nth-child(4){
+        background-image: url(../img/top/copy04.svg);
+        background-size: cover;
+    }
+    &:nth-child(6){
+        background-image: url(../img/top/copy05.svg);
+    }
+    &:nth-child(7){
+        background-image: url(../img/top/copy06.svg);
+    }
+    &.bl{
+        color: #fff;
+    }
+    .copy{
+        font-size: rem(16);
+        line-height: 3;
+    }
+}

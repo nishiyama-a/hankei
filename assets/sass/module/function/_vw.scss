@@ -1,0 +1,9 @@
+// 横幅とデザインデータのフォントサイズ
+// fx)width: 650px; → width: vw(650);
+@function vw($number, $ratio: 1080) {
+  @return floor($number * (100 / $ratio) * 100) / 100 * 1vw;
+}
+
+@function vwSp($number, $ratio: 750) {
+  @return floor($number * (100 / $ratio) * 100) / 100 * 1vw;
+}

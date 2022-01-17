@@ -1,0 +1,91 @@
+// magin
+@for $i from 0 through 20{
+  .mt#{$i * 5}{
+    margin-top: #{$i * 5}px!important;
+  }
+  .mb#{$i * 5}{
+    margin-bottom: #{$i * 5}px!important;
+  }
+  .ml#{$i * 5}{
+    margin-left: #{$i * 5}px!important;
+  }
+  .mr#{$i * 5}{
+    margin-right: #{$i * 5}px!important;
+  }
+}
+
+// font-size
+@for $i from 0 through 30{
+  .size#{$i * 1}{
+    font-size: rem($i);
+    line-height: rem($i) + 0.4;
+  }
+}
+
+// wide
+@for $i from 0 through 20{
+  .w#{$i * 5}{
+    width: #{$i * 5}px!important;
+  }
+}
+
+
+// text
+.center{
+  text-align: center!important;
+}
+.left{
+  text-align: left!important;
+}
+.right{
+  text-align: right!important;
+}
+.vat{
+  vertical-align: top!important;
+}
+.vam{
+  vertical-align: middle!important;
+}
+.vab{
+  vertical-align: bottom!important;
+}
+.txtbox{
+  text-align: justify;
+}
+
+//other
+.tel-sp{
+  pointer-events: none;
+}
+.bold{
+  font-weight: bold;
+}
+.normal{
+  font-weight: normal;
+}
+.disp-pc{
+  display: block;
+}
+.disp-sp{
+  display: none;
+}
+.line{
+  text-decoration: underline;
+}
+
+.clr-red{
+  color: $clr-red;
+}
+
+
+@include breakpoint(small) {
+  .tel-sp{
+    pointer-events: auto;
+  }
+  .disp-pc{
+    display: none;
+  }
+  .disp-sp{
+    display: block;
+  }
+}

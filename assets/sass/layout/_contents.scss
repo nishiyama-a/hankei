@@ -1,0 +1,85 @@
+html,
+body{
+  width: 100%;
+}
+.body-fixed {
+  position: fixed;
+}
+
+.l{
+  &-wrap{
+    width: 100%;
+    overflow: hidden;
+  }
+  &-contents{
+    width: 100%;
+    >.l-section{
+      margin-bottom: 100px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.l-section{
+  margin-bottom: 100px;
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  &.bgcolor{
+    padding: 60px 0;
+    &-1{
+      @extend .bgcolor;
+      background: $clr-main;
+    }
+    &-2{
+      @extend .bgcolor;
+      background: $clr-sub;
+    }
+    &-3{
+      @extend .bgcolor;
+      background: $clr-gray;
+    }
+  }
+}
+
+.sc{
+  &-inr{
+    width: 100%;
+    max-width: $sc-inr;
+    margin: 0 auto;
+    padding: 0 $win-pd;
+  }
+  &-inr-s{
+    @extend .sc-inr;
+    max-width: $sc-inr-s;
+  }
+  &-inr-w{
+    @extend .sc-inr;
+    max-width: $sc-inr-w;
+  }
+  &-box{
+    margin: 0 0 60px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+
+@include breakpoint(small){
+
+  .l{
+    &-wrap{
+      padding-top: $hambmenu-h;
+    }
+  }
+
+  .l-section{
+    &.bgcolor{
+      padding: 40px 0;
+    }
+  }
+}

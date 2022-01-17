@@ -1,0 +1,13 @@
+// font-size: rem(16);
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+// line-height: lh(16);
+@function lh($px) {
+  @if $px < 16 {
+    @return rem($px) + 0.25;
+  } @else {
+    @return rem($px) + 0.5;
+  }
+}

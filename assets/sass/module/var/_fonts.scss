@@ -1,0 +1,113 @@
+// gothic
+@font-face {
+	font-family: "Noto Sans Japanese";
+	font-style: normal;
+	font-weight: 100;
+	src:url(fonts/NotoSansCJKjp/NotoSansCJKjp-ExtraLight.woff) format("woff"),
+			url(fonts/NotoSansCJKjp/NotoSansCJKjp-ExtraLight.otf) format("opentype");
+}
+@font-face {
+	font-family: "Noto Sans Japanese";
+	font-style: normal;
+	font-weight: 200;
+	src:url(fonts/NotoSansCJKjp/NotoSansCJKjp-Light.woff) format("woff"),
+			url(fonts/NotoSansCJKjp/NotoSansCJKjp-Light.otf) format("opentype");
+}
+@font-face {
+	font-family: "Noto Sans Japanese";
+	font-style: normal;
+	font-weight: 400;
+	src:url(fonts/NotoSansCJKjp/NotoSansCJKjp-Regular.woff) format("woff"),
+			url(fonts/NotoSansCJKjp/NotoSansCJKjp-Regular.otf) format("opentype");
+}
+@font-face {
+	font-family: "Noto Sans Japanese";
+	font-style: normal;
+	font-weight: 500;
+	src:url(fonts/NotoSansCJKjp/NotoSansCJKjp-Medium.woff) format("woff"),
+			url(fonts/NotoSansCJKjp/NotoSansCJKjp-Medium.otf) format("opentype");
+}
+// @font-face {
+// 	font-family: "Noto Sans Japanese";
+// 	font-style: normal;
+// 	font-weight: 600;
+// 	src:url(fonts/NotoSansCJKjp/NotoSansCJKjp-SemiBold.woff) format("woff"),
+// 			url(fonts/NotoSansCJKjp/NotoSansCJKjp-SemiBold.otf) format("opentype");
+// }
+@font-face {
+	font-family: "Noto Sans Japanese";
+	font-style: normal;
+	font-weight: 700;
+	src:url(fonts/NotoSansCJKjp/NotoSansCJKjp-Bold.woff) format("woff"),
+			url(fonts/NotoSansCJKjp/NotoSansCJKjp-Bold.otf) format("opentype");
+}
+@font-face {
+	font-family: "Noto Sans Japanese";
+	font-style: normal;
+	font-weight: 900;
+	src:url(fonts/NotoSansCJKjp/NotoSansCJKjp-Black.woff) format("woff"),
+			url(fonts/NotoSansCJKjp/NotoSansCJKjp-Black.otf) format("opentype");
+}
+
+// mincho
+@font-face {
+	font-family: "Noto Serif Japanese";
+	font-style: normal;
+	font-weight: 100;
+	src:url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-ExtraLight.woff) format("woff"),
+			url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-ExtraLight.otf) format("opentype");
+}
+@font-face {
+	font-family: "Noto Serif Japanese";
+	font-style: normal;
+	font-weight: 200;
+	src:url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-Light.woff) format("woff"),
+			url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-Light.otf) format("opentype");
+}
+@font-face {
+	font-family: "Noto Serif Japanese";
+	font-style: normal;
+	font-weight: 400;
+	src:url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-Regular.woff) format("woff"),
+			url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-Regular.otf) format("opentype");
+}
+@font-face {
+	font-family: "Noto Serif Japanese";
+	font-style: normal;
+	font-weight: 500;
+	src:url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-Medium.woff) format("woff"),
+			url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-Medium.otf) format("opentype");
+}
+@font-face {
+	font-family: "Noto Serif Japanese";
+	font-style: normal;
+	font-weight: 600;
+	src:url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-SemiBold.woff) format("woff"),
+			url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-SemiBold.otf) format("opentype");
+}
+@font-face {
+	font-family: "Noto Serif Japanese";
+	font-style: normal;
+	font-weight: 700;
+	src:url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-Bold.woff) format("woff"),
+			url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-Bold.otf) format("opentype");
+}
+@font-face {
+	font-family: "Noto Serif Japanese";
+	font-style: normal;
+	font-weight: 900;
+	src:url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-Black.woff) format("woff"),
+			url(fonts/NotoSerifCJKjp/NotoSerifCJKjp-Black.otf) format("opentype");
+}
+
+
+// google font
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+
+// フォント
+$font-default: '游ゴシック Mediu', YuGothic, YuGothicM, 'Lato', 'Helvetica Neue', 'Helvetica', 'Noto Sans Japanese', 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','Hiragino Sans', ‘メイリオ’, meiryo, sans-serif;
+
+$font-mincho: 'Noto Serif Japanese', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+
+$font-eng: 'Lato', sans-serif;

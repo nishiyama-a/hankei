@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>JStitle</title>
+  <meta content="JSdescription" name="description">
+  <meta content="JSkeywords" name="keywords">
+  <meta content="JStitle" property="og:title">
+  <meta content="JSdescription" property="og:description">
+  <meta content="https://example.com/assets/img/" property="og:image">
+  <meta content="https://example.com/js.html" property="og:url">
+  <meta content="article" property="og:type">
+  <meta content="ja_JP" property="og:locale">
+  <meta content="summary_large_image" property="twitter:card">
+  <meta content="JStitle" property="twitter:title">
+  <meta content="JSdescription" property="twitter:description">
+  <meta content="https://example.com/assets/img/" property="twitter:image:src">
+  <link rel="stylesheet" href="/assets/css/assets.css">
+</head>
+
+<body id="pagetop">
+  <div class="l-wrap">
+    <header class="header" role="banner">
+      <p class="header-logo"><a href="/"><img src="/assets/img/site_logo.svg" alt="サイト名"></a></p>
+      <div class="header-main">
+        <div class="hamb-btn" id="hamb-btn">
+          <div class="btn-inr"><span class="btn-bar"></span></div>
+        </div>
+        <section class="hamb-menu">
+          <nav class="gnav">
+            <ul class="gnav-main">
+              <li class="li-1"><a href="/"><span>トップページ</span></a></li>
+              <li class="li-2"><a href="/js.html"><span>JS</span></a></li>
+              <li class="li-3"><a href="/form.html"><span>フォーム</span></a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </header>
+    <div class="sc-kv">
+      <div class="kv-img">
+        <picture>
+          <source media="(max-width:767px)" srcset="/assets/img/sample_4.jpg"><img src="/assets/img/sample_1.jpg"
+            alt="">
+        </picture>
+      </div>
+      <div class="kv-box">
+        <h1 class="kv-head view-up" data-text="js">JStitle</h1>
+        <div class="kv-caption view-up">ここにキャプションが入りますここにキャプションが入ります</div>
+      </div>
+    </div>
+    <div class="sc-breadcrumb view-up">
+      <div class="sc-inr-w">
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li temprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item"
+              href="/"><span itemprop="name">HOME</span></a>
+            <meta itemprop="position" content="1">
+          </li>
+          <li temprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item"
+              href="/cat/"><span itemprop="name">カテゴリ名</span></a>
+            <meta itemprop="position" content="2">
+          </li>
+          <li temprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span
+              itemprop="name">JStitle</span>
+            <meta itemprop="position" content="3">
+          </li>
+        </ol>
+      </div>
+    </div>
+    <main class="l-contents" role="main">
+      <div class="l-section">
+        <div class="sc-inr-s">
+          <h1 class="head-1 view-up" data-text="modal">モーダル</h1>
+          <div class="btn-wrap clm-1 view-up">
+            <div class="btn-style btn-1 modal-open"><span class="arr-next arr-w">modalオープン</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="l-section">
+        <div class="sc-inr-s">
+          <h1 class="head-1 view-up" data-text="accordion">アコーディオン</h1>
+        </div>
+      </div>
+      <div class="l-section">
+        <div class="sc-inr">
+          <h2 class="head-1 view-up" data-text="slider">スライダー</h2>
+          <div class="sc-box">
+            <h2 class="head-2 view-up" data-text="#swiper-1">スライダー</h2>
+            <div class="swiper-main view-up">
+              <div class="swiper-container" id="slider-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="/assets/img/sample_1.jpg"></div>
+                  <div class="swiper-slide"><img src="/assets/img/sample_2.jpg"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"><span></span></div>
+                <div class="swiper-button-next"><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="sc-box">
+            <h2 class="head-2" data-text="#swiper-2 view-up">SP時余白なし</h2>
+            <div class="swiper-main sp-wfull view-up">
+              <div class="swiper-container" id="slider-2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="/assets/img/sample_1.jpg"></div>
+                  <div class="swiper-slide"><img src="/assets/img/sample_2.jpg"></div>
+                </div>
+                <div class="swiper-button-prev"><span></span></div>
+                <div class="swiper-button-next"><span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div id="pagetop-btn"><a class="arr-top" href="#pagetop"></a></div>
+      <div class="sc-inr">
+        <div class="footer-logo"><a href="/"><img src="/assets/img/site_logo_w.svg" alt="サイト名"></a></div>
+      </div><small class="copy">&copy; 2021 SAMPLE CO., LTD. ALL RIGHTS RESERVED.</small>
+    </footer>
+  </div>
+  <div class="modal-area" id="modal-wrap">
+    <div class="modal-contents">
+      <p>
+        この原稿はダミーテキストとして使用しております。ABC・123文字組を美しく見せるにはある程度漢字とひらがなとカタカナがうまく混じったダミー原稿を使用した方が良いようです。D／４また、句読点や英字・数字を含むダミー原稿は文字組にばらつきが出るのでなるべくEFG…567使わないようにします。しかし実際の原稿には句読点や数字や英字は入ってくるのですがHIJ890？
+      </p>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="/assets/js/script.min.js"></script>
+  <!-- スライダー用 -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/js/swiper.min.js"></script>
+  <!-- スクロールで表示 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+  <script src="/assets/js/gsap.min.js"></script>
+</body>
+
+</html>

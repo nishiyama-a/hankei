@@ -1,0 +1,55 @@
+.sc-breadcrumb{
+  margin: 0!important;
+  padding: 20px 0;
+  ol{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      font-size: rem(12);
+      position: relative;
+      &::after{
+        margin: 0 5px 0 2px;
+        content: '>';
+      }
+      &:first-child{
+        a{
+          color: $clr-main;
+        }
+      }
+      &:last-child{
+        margin: 0;
+        &:after{
+          display: none;
+        }
+      }
+      a{
+        color: $clr-text;
+      }
+      span{
+        white-space : normal;
+      }
+    }
+  }
+}
+
+
+
+@include breakpoint(small){
+  .sc-breadcrumb{
+    padding: 10px 0;
+    ol{
+      li{
+        font-size: rem(9);
+        &:last-of-type{
+          span{
+            width: 120px;
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}

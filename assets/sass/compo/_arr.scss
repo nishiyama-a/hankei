@@ -1,0 +1,73 @@
+$arr-width: 2px;
+
+%icon-cmn {
+  position: relative;
+  &:before{
+    margin: auto;
+    content: '';
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+  }
+}
+%icon-arr {
+  &:before{
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+  }
+}
+
+.arr{
+  &-prev{
+    @extend %icon-cmn;
+    @extend %icon-arr;
+    &:before{
+      border-bottom: $arr-width solid #FFF;
+      border-left: $arr-width solid #FFF;
+      left: 10px;
+    }
+  }
+  &-next{
+    @extend %icon-cmn;
+    @extend %icon-arr;
+    &:before{
+      border-top: $arr-width solid #FFF;
+      border-right: $arr-width solid #FFF;
+      left: auto;
+      right: 10px;
+    }
+  }
+  &-top{
+    @extend %icon-cmn;
+    @extend %icon-arr;
+    &:before{
+      border-top: $arr-width solid #FFF;
+      border-left: $arr-width solid #FFF;
+    }
+  }
+  &-btm{
+    @extend %icon-cmn;
+    @extend %icon-arr;
+    &:before{
+      border-bottom: $arr-width solid #FFF;
+      border-right: $arr-width solid #FFF;
+    }
+  }
+  // color
+  &-main{
+    &:before{
+      border-color: $clr-main;
+    }
+  }
+  &-sub{
+    &:before{
+      border-color: $clr-sub;
+    }
+  }
+
+}
+

@@ -1,0 +1,90 @@
+%head-cmn {
+  margin-bottom: 30px;
+  font-weight: bold;
+  position: relative;
+}
+.head{
+  &-1{
+    @extend %head-cmn;
+    font-size: rem(30);
+    line-height: lh(30);
+    text-align: center;
+    &:before{
+      content: attr(data-text);
+      color: $clr-sub;
+      font-family: $font-eng;
+      font-size: 180%;
+      display: block;
+    }
+  }
+  &-2{
+    @extend %head-cmn;
+    font-size: rem(24);
+    line-height: lh(24);
+    &:before{
+      content: attr(data-text);
+      color: $clr-main;
+      display: block;
+      font-size: 160%;
+      font-family: $font-eng;
+    }
+  }
+  &-3{
+    @extend %head-cmn;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $clr-gray;
+    font-size: rem(20);
+    &:after{
+      width: 200px;
+      height: 2px;
+      display: block;
+      background: $clr-main;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+    }
+  }
+  &-4{
+    @extend %head-cmn;
+    margin-bottom: 20px;
+    color: $clr-main;
+    font-size: rem(18);
+  }
+  &-5{
+    @extend %head-cmn;
+    margin-bottom: 20px;
+    color: $clr-sub;
+    font-size: rem(18);
+  }
+}
+
+
+
+
+
+// SP
+@include breakpoint(small){
+
+  .head{
+    &-1{
+      font-size: rem(24);
+    }
+    &-2{
+      font-size: rem(20);
+    }
+    &-3{
+      margin-bottom: 20px;
+      font-size: rem(18);
+      &:after{
+        width: 30%;
+      }
+    }
+    &-4,
+    &-5{
+      margin-bottom: 20px;
+      font-size: rem(16);
+    }
+  }
+
+}

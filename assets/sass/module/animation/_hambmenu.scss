@@ -1,0 +1,57 @@
+// メニューバー
+@include keyframes(menu-bar-1){
+  0% {
+    -webkit-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: translateY(10px) rotate(0);
+    transform: translateY(10px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+  }
+}
+@include keyframes(menu-bar-2){
+  0% {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(-10px) rotate(0);
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+  }
+}
+@include keyframes(active-menu-bar-1){
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px) rotate(0);
+    transform: translateY(10px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
+  }
+}
+@include keyframes(active-menu-bar-2){
+  0% {
+    -webkit-transform: translateY(0) rotate(0);
+    -webkit-transform: translateY(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px) rotate(0);
+    -webkit-transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+  }
+}
